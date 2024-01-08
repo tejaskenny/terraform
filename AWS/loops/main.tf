@@ -35,7 +35,7 @@ variable "user_set_1" {
 
 resource "aws_iam_user" "test_users_set2" {
     for_each = var.user_set_2
-    name=each.value  
+    name=each.value                                  # here each is to itirate each value
 }
 
 variable "user_set_2" {

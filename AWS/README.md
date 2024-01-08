@@ -106,6 +106,7 @@ execute commands on remote
 # Note :- Needed ssh  acces 
 
 ===============================================
+dynamic block
 
+use to implimate multiple itteration (eg:  add multiple ports in a SG)
 
-cd 
