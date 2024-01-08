@@ -1,0 +1,42 @@
+===============================================
+advance variables concept:   Folder  [adv_variable_concept]
+
+Files  :  variable.tf , terraform.tfvars , anyName_1.tfvars, anyName_2.tfvars
+
+variable.tf content:
+------
+variable "name" {   # Only declare the variable 
+}
+------
+
+terraform.tfvars   # Define the value 
+---
+name="value"
+---
+
+value will be passed automatically
+_____________________________________________________
+
+to  define multiple value to a variable depending on env
+
+variable.tf content:
+------
+variable "name" {   # Only declare the variable 
+}
+------
+
+anyName_1.tfvars
+------
+name="value_1"
+------
+
+
+anyName_2.tfvars
+------
+name="value_2"
+------
+
+pass the tfvars file as per below
+
+#terraform plan -var-file="anyName_2.tfvars"
+#terraform apply -var-file="anyName_2.tfvars"

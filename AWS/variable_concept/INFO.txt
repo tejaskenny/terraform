@@ -1,0 +1,27 @@
+===============================================
+variables :   Folder  [variable_concept]
+
+variable "<name>"{
+    description = ""
+    type = number/string/bool/
+    default = 2/"value"/false/
+    }
+
+variable "<name>"{
+    descripttion = ""
+    type = list(<string/number>)
+    default= ["val1","val2"]/[1,2,3]
+
+}
+
+variable "<name>"{
+    descripttion = ""
+    type = map(<string/number>)
+    default= {
+        key = "<project name>",   #key
+        value = "<>"            #value
+    }
+}
+
+
+Also we can create a  variable.tf file  and add all the variable data in that file
