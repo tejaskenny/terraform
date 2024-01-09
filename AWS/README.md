@@ -106,7 +106,29 @@ execute commands on remote
 # Note :- Needed ssh  acces 
 
 ===============================================
-dynamic block
+dynamic block :        Folder [dynamic]
 
 use to implimate multiple itteration (eg:  add multiple ports in a SG)
 
+===============================================
+module :     Folder [module]
+
+call  and run multiple main.tf files from single file
+
+===============================================
+
+aws_key_pair:     Folder [aws_key_pair]
+
+to add key to remote server 
+
+===============================================
+workspace (identical to  namespace in kubernetes):   Folder [workspace]
+
+File: main.tf,variable.tf,prod.tfvars,beta.tfvars
+
+workspaces: prod, beta
+command: terraform new/list/show/select/delete
+
+first select the workspace and run apply respectively this will create setup for respective workspace ,if needed to destroy the setup one must first select the workspace and then destroy.
+
+===============================================
