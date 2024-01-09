@@ -4,9 +4,9 @@ provider "aws" {
     secret_key = ""
 }
 
-resource "ami_instance" "test"{
-    ami = 
-    instance_id = var.instance_type
+resource "aws_instance" "test"{
+    ami = var.ami_id
+    instance_type = var.instance_type
     tags = var.project_env
     count = var.ec2_count
 
