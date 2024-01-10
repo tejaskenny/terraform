@@ -131,7 +131,19 @@ Terraform logs debug & Validation  : Folder [validation]
 
 ===============================================
 
-Null Resource:
+Null Resource: Folder [null_resource]
 
 To do nothing  as per triggers : Use to run  [shell commands/ ansible playbook/pythonor other language programs] in provisioner
 If the value changes in trigger provisioner will be executed
+
+===============================================
+
+Terraform import:  Folder [import_resource]
+
+To import the instance or any supporting service if not manage by terraform.
+
+#terraform import <resource type>.<resource name> <resource id>
+
+steps below for ec2_instance:
+1. run the command import [terraform import aws_instance.ec2_example i-02342342342ddsa]
+2. create main.tf file with all the metadata  required.
