@@ -97,7 +97,41 @@ first select the workspace and run apply respectively this will create setup for
 
 ===============================================
 Data Source :  Folder [data_source]
-
+File: main.tf
 to get metadata(public ip/private ip etc) of a specific instance or range of instances
 
 ===============================================
+
+local/remote tfstate : Folder [tfstate_manage]
+File: main.tf
+
+command: terraform state pull (to get the tfstate file stored remotely)
+
+===============================================
+
+Aws_lambda   : Folder [aws_lambda]
+
+File: main.tf, hello-python.py
+
+===============================================
+
+Aws_credentials
+
+1. write directly in provider file
+2. create creds file  and pass  the path in provider  [variable name: shared_credentials_files]
+3. export the variable no need to mention in provider [variable: AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY] 
+
+===============================================
+Terraform logs debug & Validation  : Folder [validation]
+1. export:
+    TF_LOG=DEBUG
+    TF_LOG_PATH="/path/to/log"
+
+2. validation
+
+===============================================
+
+Null Resource:
+
+To do nothing  as per triggers : Use to run  [shell commands/ ansible playbook/pythonor other language programs] in provisioner
+If the value changes in trigger provisioner will be executed
