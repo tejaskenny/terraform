@@ -23,6 +23,5 @@ resource "aws_s3_bucket" "bucket_resource_name" {
     bucket = "bucket_name"
     
 
-    
-  
+
 }

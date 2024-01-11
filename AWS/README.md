@@ -139,6 +139,7 @@ If the value changes in trigger provisioner will be executed
 ===============================================
 
 Terraform import:  Folder [import_resource]
+Files: main.tf
 
 To import the instance or any supporting service if not manage by terraform.
 
@@ -147,3 +148,11 @@ To import the instance or any supporting service if not manage by terraform.
 steps below for ec2_instance:
 1. run the command import [terraform import aws_instance.ec2_example i-02342342342ddsa]
 2. create main.tf file with all the metadata  required.
+
+===============================================
+
+Terraform user_data :   Folder [user_data]
+
+Files: main.tf,install_update_package.sh
+
+user_data variable use to run shell script after Vm starts
